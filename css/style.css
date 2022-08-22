@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+body {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif; }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container .container__notice {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 57.5% 42.5%;
+    grid-template-rows: 25% 75%;
+    background: linear-gradient(); }
+    .container .container__notice .notice--logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 65%;
+      margin: 0 auto;
+      padding-top: 4rem; }
+      .container .container__notice .notice--logo img {
+        width: 12.5rem; }
+    .container .container__notice .notice__image {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      background-image: url("../images/hero-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .container .notice__content h1 {
+    font-size: clamp(2.5rem, 7.8vw, 4.7rem);
+    padding: 0rem 12rem 0rem 8.5rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    line-height: clamp(3rem, 7.8vw, 5.5rem); }
+    .container .notice__content h1 span {
+      font-weight: 300;
+      color: #f96262; }
+  .container .notice__content .content--text {
+    font-size: 1.125rem;
+    padding: 0rem 12rem 0rem 8.5rem;
+    line-height: 2rem;
+    color: #f96262; }
+  .container .notice__content .content__email {
+    padding: 0rem 12rem 0rem 8.5rem;
+    margin-top: 2rem; }
+    .container .notice__content .content__email .email__container {
+      width: auto;
+      height: 4.75rem;
+      position: relative; }
+      .container .notice__content .content__email .email__container .email, .container .notice__content .content__email .email__container .success, .container .notice__content .content__email .email__container .error {
+        width: 75%;
+        padding: 1.25rem 2rem;
+        border-radius: 2rem;
+        border: 1px solid #f96262;
+        font-size: 1.125rem;
+        outline: none; }
+        .container .notice__content .content__email .email__container .email::placeholder, .container .notice__content .content__email .email__container .success::placeholder, .container .notice__content .content__email .email__container .error::placeholder {
+          font-size: 1.125rem;
+          font-family: 'Josefin Sans', sans-serif; }
+      .container .notice__content .content__email .email__container .btn {
+        position: absolute;
+        right: 1rem;
+        top: -.0625rem;
+        border: none;
+        border-radius: 2rem;
+        padding: 1.28765rem 3.25rem;
+        background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+        cursor: pointer; }
+        .container .notice__content .content__email .email__container .btn:hover {
+          box-shadow: 0rem 0.625rem 0.625rem rgba(0, 0, 0, 0.2); }
+      .container .notice__content .content__email .email__container .success {
+        border: 1px solid green; }
+      .container .notice__content .content__email .email__container .error {
+        border: 1px solid red;
+        background-image: url("../images/icon-error.svg");
+        background-repeat: no-repeat;
+        background-position: 75% 50%;
+        background-size: 1.875rem; }
+    .container .notice__content .content__email small {
+      font-size: 1rem;
+      margin-left: 1.5rem;
+      color: red; }
+
+@media only screen and (max-width: 1200px) {
+  .container .container__notice {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto); }
+    .container .container__notice .notice--logo {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      width: 85%; }
+    .container .container__notice .notice__image {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      width: 35rem;
+      height: 25rem;
+      margin: 2.5rem auto 0rem;
+      background-image: url("../images/hero-mobile.jpg"); }
+    .container .container__notice .notice__content {
+      text-align: center; }
+      .container .container__notice .notice__content h1 {
+        width: 60%;
+        margin: 1.5rem auto;
+        padding: 0; }
+      .container .container__notice .notice__content .content--text {
+        width: 50%;
+        margin: 0px auto;
+        padding: 0; }
+      .container .container__notice .notice__content .content__email {
+        padding: 0; }
+        .container .container__notice .notice__content .content__email .email, .container .container__notice .notice__content .content__email .email__container .success, .container .container__notice .notice__content .content__email .email__container .error {
+          width: 60%; }
+        .container .container__notice .notice__content .content__email .btn {
+          right: 12%; } }
+
+@media only screen and (max-width: 560px) {
+  .container .container__notice .notice--logo {
+    padding-top: 3rem; }
+    .container .container__notice .notice--logo img {
+      width: 10rem; }
+  .container .container__notice .notice__image {
+    width: 100%;
+    height: 18rem; }
+  .container .container__notice .notice__content h1 {
+    width: 20.625rem;
+    margin-top: 2rem; }
+  .container .container__notice .notice__content .content--text {
+    width: 85%; }
+  .container .container__notice .notice__content .content__email .email__container .email, .container .container__notice .notice__content .content__email .email__container .success, .container .container__notice .notice__content .content__email .email__container .error {
+    width: 70%;
+    padding: .9375rem 2rem; }
+  .container .container__notice .notice__content .content__email .email__container .btn {
+    right: 5%;
+    padding: .9375rem 2rem 1rem 2rem; } }
