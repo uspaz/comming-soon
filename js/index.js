@@ -7,21 +7,24 @@ function valid() {
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, 'Please provide a valid email');
   } else {
-    setSuccessFor(email);
+    setSuccessFor(email, 'successfully registered');
   }
 
 }
+const small = document.querySelector('small');
 
 function setErrorFor(input, message) {
   const formControl = input;
-  const small = document.querySelector('small');
   formControl.className = 'error';
   small.innerText = message;
+  small.classList.remove("message-success");
 }
 
-function setSuccessFor(input) {
+function setSuccessFor(input, message) {
   const formControl = input;
   formControl.className = 'success';
+  small.innerText = message;
+  small.classList.add("message-success");
 }
 
 function isEmail(email) {

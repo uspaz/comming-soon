@@ -87,6 +87,8 @@ body {
       font-size: 1rem;
       margin-left: 1.5rem;
       color: red; }
+    .container .notice__content .content__email .message-success {
+      color: green; }
 
 @media only screen and (max-width: 1200px) {
   .container .container__notice {
